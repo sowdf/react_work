@@ -1,4 +1,4 @@
-import React, { useState, useRef, useEffect } from "react";
+import React, { useState, useRef, useEffect, useCallback } from "react";
 import { useDrag } from "react-use-gesture";
 import useSpring from "./useSpring";
 import useCollisionDetection from "./useCollisionDetection";
@@ -42,12 +42,8 @@ const Dot = ({ moving, moveEnd, initializePositionY }) => {
       xy,
       movement: [mx, my]
     } = props;
-    console.log("___________________props_______________", props);
     const top = oDivRef.current.getBoundingClientRect().top;
     const [onOff, currentTop] = moving(top);
-    console.log("___________________top_______________", top);
-    console.log("___________________my_______________", my);
-    console.log("___________________currentTop_______________", currentTop);
     if (onOff) {
       if (my === 0) {
         return;
@@ -86,6 +82,18 @@ const Dot = ({ moving, moveEnd, initializePositionY }) => {
     initializePositionY(top);
   }, []);
 
+  const handleTouchmove = useCallback(() => {}, []);
+  const handleTouchend = useCallback(() => {
+    document.removeEventListener("touchmove", handleTouchmove);
+  }, []);
+  const handleTouchstart = useCallback(() => {
+    document.addEventListener("touchmove", handleTouchmove);
+    document.addEventListener("touchend", handleTouchend);
+  }, []);
+
+  useEffect(() => {
+    oDivRef.current.addEventListener("touchstart", handleTouchstart);
+  }, []);
   // Bind it to a component
   if (oDivRef.current) {
     //  console.log(oDivRef.current.previousElementSibling);

@@ -2,13 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="af0e6f76-829a-46da-b8c5-750dc4c8b528" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/timeRange/Dot.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/timeRange/useCollisionDetection.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/timeRange/TimeRange.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/timeRange/TimeRange.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/timeRange/useSpring.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/timeRange/useSpring.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/timeRange/Dot.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/timeRange/Dot.jsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -332,7 +327,7 @@
       <option name="presentableId" value="Default" />
       <updated>1585633951919</updated>
       <workItem from="1585633954554" duration="21929000" />
-      <workItem from="1585719980099" duration="12746000" />
+      <workItem from="1585719980099" duration="14111000" />
     </task>
     <task id="LOCAL-00001" summary="代碼提交">
       <created>1585635095153</created>
@@ -341,7 +336,14 @@
       <option name="project" value="LOCAL" />
       <updated>1585635095153</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="代碼提交">
+      <created>1585736402349</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1585736402349</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -352,10 +354,10 @@
     <option name="LAST_COMMIT_MESSAGE" value="代碼提交" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="2372" y="39" key="CommitChangelistDialog2" timestamp="1585635093582">
+    <state x="2372" y="39" key="CommitChangelistDialog2" timestamp="1585736401424">
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
-    <state x="2372" y="39" key="CommitChangelistDialog2/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1585635093582" />
+    <state x="2372" y="39" key="CommitChangelistDialog2/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1585736401424" />
     <state width="1893" height="406" key="GridCell.Tab.0.bottom" timestamp="1585651656841">
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
@@ -372,9 +374,9 @@
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
     <state width="1893" height="406" key="GridCell.Tab.0.right/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1585651656841" />
-    <state x="2372" y="186" key="Vcs.Push.Dialog.v2" timestamp="1585635096720">
+    <state x="2372" y="186" key="Vcs.Push.Dialog.v2" timestamp="1585736403977">
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
-    <state x="2372" y="186" key="Vcs.Push.Dialog.v2/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1585635096720" />
+    <state x="2372" y="186" key="Vcs.Push.Dialog.v2/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1585736403977" />
   </component>
 </project>
