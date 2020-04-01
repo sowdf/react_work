@@ -36,3 +36,19 @@
     transform: rotate(360deg);
   }
 }
+
+.zhuzi {
+  width: 30px;
+  background: pink;
+  padding: 5px 5px;
+  border-radius: 20px;
+  height:400px;
+  margin:30px auto;
+}
+
+.dot {
+  width: 30px;
+  height: 30px;
+  background: red;
+  border-radius: 100%;
+}

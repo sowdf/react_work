@@ -2,12 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="af0e6f76-829a-46da-b8c5-750dc4c8b528" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/timeRange/TimeRange.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/timeRange/useSpring.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/timeRange/Dot.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/timeRange/useCollisionDetection.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/timeRange/TimeRange.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/timeRange/TimeRange.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/timeRange/useSpring.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/timeRange/useSpring.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -34,6 +35,7 @@
   <component name="PropertiesComponent">
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
@@ -50,6 +52,275 @@
       <recent name="C:\Users\caozhihui\Desktop\react_work" />
     </key>
   </component>
+  <component name="RestClientSettings">
+    <option name="REQUEST_HISTORY">
+      <list>
+        <RestClientRequest>
+          <option name="biscuits">
+            <list>
+              <Biscuit>
+                <option name="date" value="-1" />
+                <option name="domain" value="httpbin.org" />
+                <option name="name" value="fake" />
+                <option name="path" value="/" />
+                <option name="value" value="fake_value" />
+              </Biscuit>
+              <Biscuit>
+                <option name="date" value="-1" />
+                <option name="domain" value="httpbin.org" />
+                <option name="name" value="last_nonce" />
+                <option name="path" value="/" />
+                <option name="value" value="d5389fa5fb77140d43a1c92f197bcde4" />
+              </Biscuit>
+              <Biscuit>
+                <option name="date" value="-1" />
+                <option name="domain" value="httpbin.org" />
+                <option name="name" value="stale_after" />
+                <option name="path" value="/" />
+                <option name="value" value="never" />
+              </Biscuit>
+            </list>
+          </option>
+          <option name="httpMethod" value="GET" />
+          <option name="urlBase" value="https://httpbin.org/headers" />
+          <option name="urlPath" value="" />
+          <option name="headers">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="Authorization" />
+                <option name="value" value="Bearer {{auth_token}}" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="textToSend" value="" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+        <RestClientRequest>
+          <option name="biscuits">
+            <list>
+              <Biscuit>
+                <option name="date" value="-1" />
+                <option name="domain" value="httpbin.org" />
+                <option name="name" value="fake" />
+                <option name="path" value="/" />
+                <option name="value" value="fake_value" />
+              </Biscuit>
+              <Biscuit>
+                <option name="date" value="-1" />
+                <option name="domain" value="httpbin.org" />
+                <option name="name" value="last_nonce" />
+                <option name="path" value="/" />
+                <option name="value" value="d5389fa5fb77140d43a1c92f197bcde4" />
+              </Biscuit>
+              <Biscuit>
+                <option name="date" value="-1" />
+                <option name="domain" value="httpbin.org" />
+                <option name="name" value="stale_after" />
+                <option name="path" value="/" />
+                <option name="value" value="never" />
+              </Biscuit>
+            </list>
+          </option>
+          <option name="httpMethod" value="POST" />
+          <option name="urlBase" value="https://httpbin.org/post" />
+          <option name="urlPath" value="" />
+          <option name="headers">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="Content-Type" />
+                <option name="value" value="application/json" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="haveTextToSend" value="true" />
+          <option name="textToSend" value="{&#10;  &quot;token&quot;: &quot;my-secret-token&quot;&#10;}" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+        <RestClientRequest>
+          <option name="biscuits">
+            <list>
+              <Biscuit>
+                <option name="date" value="-1" />
+                <option name="domain" value="httpbin.org" />
+                <option name="name" value="fake" />
+                <option name="path" value="/" />
+                <option name="value" value="fake_value" />
+              </Biscuit>
+            </list>
+          </option>
+          <option name="httpMethod" value="GET" />
+          <option name="urlBase" value="https://httpbin.org/digest-auth/realm/user/passwd" />
+          <option name="urlPath" value="" />
+          <option name="textToSend" value="" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+        <RestClientRequest>
+          <option name="httpMethod" value="GET" />
+          <option name="urlBase" value="https://httpbin.org/digest-auth/realm/user/passwd" />
+          <option name="urlPath" value="" />
+          <option name="textToSend" value="" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+        <RestClientRequest>
+          <option name="httpMethod" value="GET" />
+          <option name="urlBase" value="https://httpbin.org/basic-auth/user/passwd" />
+          <option name="urlPath" value="" />
+          <option name="textToSend" value="" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+        <RestClientRequest>
+          <option name="httpMethod" value="GET" />
+          <option name="urlBase" value="https://httpbin.org/basic-auth/user/passwd" />
+          <option name="urlPath" value="" />
+          <option name="textToSend" value="" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+        <RestClientRequest>
+          <option name="httpMethod" value="GET" />
+          <option name="urlBase" value="https://httpbin.org/get" />
+          <option name="urlPath" value="" />
+          <option name="textToSend" value="" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+        <RestClientRequest>
+          <option name="httpMethod" value="GET" />
+          <option name="urlBase" value="https://httpbin.org/status/404" />
+          <option name="urlPath" value="" />
+          <option name="textToSend" value="" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+        <RestClientRequest>
+          <option name="httpMethod" value="GET" />
+          <option name="urlBase" value="https://httpbin.org/status/200" />
+          <option name="urlPath" value="" />
+          <option name="textToSend" value="" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+        <RestClientRequest>
+          <option name="httpMethod" value="POST" />
+          <option name="urlBase" value="https://httpbin.org/post" />
+          <option name="urlPath" value="" />
+          <option name="headers">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="Content-Type" />
+                <option name="value" value="application/json" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="haveTextToSend" value="true" />
+          <option name="textToSend" value="{&#10;  &quot;id&quot;: d34485d0-4985-4eb6-91e4-aea068fa35b4,&#10;  &quot;price&quot;: 912,&#10;  &quot;ts&quot;: 1585651453,&#10;  &quot;value&quot;: &quot;content&quot;&#10;}" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+        <RestClientRequest>
+          <option name="httpMethod" value="POST" />
+          <option name="urlBase" value="https://httpbin.org/post" />
+          <option name="urlPath" value="" />
+          <option name="headers">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="Content-Type" />
+                <option name="value" value="multipart/form-data; boundary=WebAppBoundary" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="isFileUpload" value="true" />
+          <option name="textToSend" value="" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+        <RestClientRequest>
+          <option name="httpMethod" value="POST" />
+          <option name="urlBase" value="https://httpbin.org/post" />
+          <option name="urlPath" value="" />
+          <option name="headers">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="Content-Type" />
+                <option name="value" value="application/x-www-form-urlencoded" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="haveTextToSend" value="true" />
+          <option name="textToSend" value="id=999&amp;value=content" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+        <RestClientRequest>
+          <option name="httpMethod" value="POST" />
+          <option name="urlBase" value="https://httpbin.org/post" />
+          <option name="urlPath" value="" />
+          <option name="headers">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="Content-Type" />
+                <option name="value" value="application/json" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="haveTextToSend" value="true" />
+          <option name="textToSend" value="{&#10;  &quot;id&quot;: 999,&#10;  &quot;value&quot;: &quot;content&quot;&#10;}" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+        <RestClientRequest>
+          <option name="httpMethod" value="POST" />
+          <option name="urlBase" value="https://httpbin.org/post" />
+          <option name="urlPath" value="" />
+          <option name="headers">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="Content-Type" />
+                <option name="value" value="application/json" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="haveTextToSend" value="true" />
+          <option name="textToSend" value="{&#10;  &quot;id&quot;: 170b6151-9a04-40a8-86a4-5f91e667a352,&#10;  &quot;price&quot;: 14,&#10;  &quot;ts&quot;: 1585651417,&#10;  &quot;value&quot;: &quot;content&quot;&#10;}" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+        <RestClientRequest>
+          <option name="httpMethod" value="POST" />
+          <option name="urlBase" value="https://httpbin.org/post" />
+          <option name="urlPath" value="" />
+          <option name="headers">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="Content-Type" />
+                <option name="value" value="multipart/form-data; boundary=WebAppBoundary" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="isFileUpload" value="true" />
+          <option name="textToSend" value="" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="HTTP Request.All in requests-with-authorization">
+    <configuration name="All in post-requests (1)" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" path="jar://$APPLICATION_HOME_DIR$/plugins/restClient/lib/restClient.jar!/com/intellij/ws/rest/client/requests/collection/post-requests.http">
+      <method v="2" />
+    </configuration>
+    <configuration name="All in requests-with-authorization" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" path="jar://$APPLICATION_HOME_DIR$/plugins/restClient/lib/restClient.jar!/com/intellij/ws/rest/client/requests/collection/requests-with-authorization.http">
+      <method v="2" />
+    </configuration>
+    <configuration name="All in requests-with-tests" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" path="jar://$APPLICATION_HOME_DIR$/plugins/restClient/lib/restClient.jar!/com/intellij/ws/rest/client/requests/collection/requests-with-tests.http">
+      <method v="2" />
+    </configuration>
+    <configuration name="requests-with-tests#3" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" path="jar://$APPLICATION_HOME_DIR$/plugins/restClient/lib/restClient.jar!/com/intellij/ws/rest/client/requests/collection/requests-with-tests.http" index="3" runType="Run single request">
+      <method v="2" />
+    </configuration>
+    <configuration name="requests-with-tests#4" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" path="jar://$APPLICATION_HOME_DIR$/plugins/restClient/lib/restClient.jar!/com/intellij/ws/rest/client/requests/collection/requests-with-tests.http" index="4" runType="Run single request">
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="HTTP Request.All in requests-with-authorization" />
+        <item itemvalue="HTTP Request.requests-with-tests#3" />
+        <item itemvalue="HTTP Request.requests-with-tests#4" />
+        <item itemvalue="HTTP Request.All in requests-with-tests" />
+        <item itemvalue="HTTP Request.All in post-requests (1)" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -60,7 +331,8 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1585633951919</updated>
-      <workItem from="1585633954554" duration="9552000" />
+      <workItem from="1585633954554" duration="21929000" />
+      <workItem from="1585719980099" duration="12746000" />
     </task>
     <task id="LOCAL-00001" summary="代碼提交">
       <created>1585635095153</created>
@@ -84,6 +356,22 @@
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
     <state x="2372" y="39" key="CommitChangelistDialog2/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1585635093582" />
+    <state width="1893" height="406" key="GridCell.Tab.0.bottom" timestamp="1585651656841">
+      <screen x="1920" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1893" height="406" key="GridCell.Tab.0.bottom/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1585651656841" />
+    <state width="1893" height="406" key="GridCell.Tab.0.center" timestamp="1585651656840">
+      <screen x="1920" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1893" height="406" key="GridCell.Tab.0.center/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1585651656840" />
+    <state width="1893" height="406" key="GridCell.Tab.0.left" timestamp="1585651656840">
+      <screen x="1920" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1893" height="406" key="GridCell.Tab.0.left/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1585651656840" />
+    <state width="1893" height="406" key="GridCell.Tab.0.right" timestamp="1585651656841">
+      <screen x="1920" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1893" height="406" key="GridCell.Tab.0.right/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1585651656841" />
     <state x="2372" y="186" key="Vcs.Push.Dialog.v2" timestamp="1585635096720">
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
