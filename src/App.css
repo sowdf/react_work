@@ -38,12 +38,14 @@
 }
 
 .zhuzi {
+  position: absolute;
   width: 30px;
   background: pink;
   padding: 5px 5px;
   border-radius: 20px;
-  height:400px;
-  margin:30px auto;
+  height: 400px;
+  right: 0;
+  top: 0;
 }
 
 .dot {
@@ -51,4 +53,35 @@
   height: 30px;
   background: red;
   border-radius: 100%;
+}
+
+.box {
+  position: relative;
+  width: 300px;
+  height: 400px;
+  margin: 100px auto;
+  background: yellow;
+  padding: 5px 5px;
+}
+
+.rectangle {
+}
+.rectangle div {
+  height: 30px;
+  font-size: 14px;
+}
+.rectangle .rectangle-0 {
+  background: red;
+}
+.rectangle .rectangle-1 {
+  background: purple;
+}
+.rectangle .rectangle-2 {
+  background: plum;
+}
+.rectangle .rectangle-3 {
+  background: blue;
+}
+.rectangle .rectangle-4 {
+  background: chartreuse;
 }

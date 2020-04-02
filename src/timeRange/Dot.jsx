@@ -1,114 +1,105 @@
-import React, { useState, useRef, useEffect, useCallback } from "react";
-import { useDrag } from "react-use-gesture";
-import useSpring from "./useSpring";
-import useCollisionDetection from "./useCollisionDetection";
+import React, { useState, useRef, useEffect, useCallback } from 'react';
+import useSpring from './useSpring';
+
 const mo = function(e) {
   e.preventDefault();
 };
 
-/***禁止滑动***/
+/** *禁止滑动** */
 function stop() {
-  document.body.style.overflow = "hidden";
-  document.addEventListener("touchmove", mo, { passive: false }); //禁止页面滑动
+  document.body.style.overflow = 'hidden';
+  document.addEventListener('touchmove', mo, { passive: false }); // 禁止页面滑动
 }
 
-/***取消滑动限制***/
+/** *取消滑动限制** */
 function move() {
-  document.body.style.overflow = ""; //出现滚动条
-  document.removeEventListener("touchmove", mo, { passive: false });
+  document.body.style.overflow = ''; // 出现滚动条
+  document.removeEventListener('touchmove', mo, { passive: false });
 }
-const Dot = ({ moving, moveEnd, initializePositionY }) => {
+const Dot = ({ moving, moveEnd, initializeTop, limitfn }) => {
   const [position, set] = useSpring(() => ({
     x: 0,
     y: 0,
     lastX: 0,
-    lastY: 0
+    lastY: 0,
   }));
-  const { x, y, lastX, lastY } = position;
+  const { x, y } = position;
+  const latestRef = useRef(0);
+  const disY = useRef(0);
   const oDivRef = useRef();
-  // 最大移动量
-  const maxMovePositionRef = useRef();
-  const isLimitRef = useRef();
-  // Set the drag hook and define component movement based on gesture data
-  const bind = useDrag(props => {
-    if (!props.offset) {
-      return;
-    }
-    const {
-      down,
-      dragging,
-      offset: [ox, oy],
-      lastOffset,
-      xy,
-      movement: [mx, my]
-    } = props;
-    const top = oDivRef.current.getBoundingClientRect().top;
-    const [onOff, currentTop] = moving(top);
-    if (onOff) {
-      if (my === 0) {
-        return;
-      }
-      if (!maxMovePositionRef.current) {
-        if (my < 0) {
-          maxMovePositionRef.current = currentTop - top; // < 0
-        } else {
-          maxMovePositionRef.current = top - currentTop; // > 0
+  const startClientRef = useRef();
+  const limitRef = useRef();
+  const [loaded, setLoaded] = useState(false);
+  useEffect(() => {
+    const { top } = oDivRef.current.getBoundingClientRect();
+    initializeTop(top);
+  }, [initializeTop]);
+
+  const handleTouchmove = useCallback(
+    e => {
+      const {
+        touches: [{ clientY }],
+      } = e;
+      // const boundingClientRect = oDivRef.current.getBoundingClientRect();
+      disY.current = clientY - startClientRef.current;
+      const limit = limitRef.current;
+      if (disY.current < 0) {
+        // ↑↑↑↑↑↑↑↑↑↑↑
+        if (limit[0] < Math.abs(disY.current)) {
+          disY.current = -limit[0];
         }
+        set({ ...position, y: latestRef.current + disY.current });
+      } else {
+        // ↓↓↓↓↓↓↓↓↓↓
+        if (limit[1] < Math.abs(disY.current)) {
+          disY.current = limit[1];
+        }
+        set({ ...position, y: latestRef.current + disY.current });
       }
-      return;
-    } else {
-      maxMovePositionRef.current = "";
-    }
-    console.log(onOff);
-    let deviationPositionY =
-      lastY +
-      (maxMovePositionRef.current === undefined
-        ? maxMovePositionRef.current
-        : my);
-    if (down) {
-      set({ ...position, y: deviationPositionY });
-      // stop();
-    } else {
-      set({ ...position, lastY: deviationPositionY });
-      moveEnd(top);
-      maxMovePositionRef.current = "";
-      // move();
-    }
-    return false;
-    // set({ x: down ? x + mx : x, y: down ? y + my : y });
-  });
-  useEffect(() => {
-    const top = oDivRef.current.getBoundingClientRect().top;
-    initializePositionY(top);
-  }, []);
+    },
+    [position, set],
+  );
 
-  const handleTouchmove = useCallback(() => {}, []);
   const handleTouchend = useCallback(() => {
-    document.removeEventListener("touchmove", handleTouchmove);
-  }, []);
-  const handleTouchstart = useCallback(() => {
-    document.addEventListener("touchmove", handleTouchmove);
-    document.addEventListener("touchend", handleTouchend);
-  }, []);
+    latestRef.current += disY.current;
+    const boundingClientRect = oDivRef.current.getBoundingClientRect();
+    moveEnd(boundingClientRect.top);
+    document.removeEventListener('touchmove', handleTouchmove);
+    document.removeEventListener('touchend', handleTouchend);
+    // set({ ...position, lastY: y });
+  }, [handleTouchmove, moveEnd]);
+
+  const handleTouchstart = useCallback(
+    e => {
+      const {
+        touches: [{ clientY }],
+      } = e;
+
+      limitRef.current = limitfn();
+      startClientRef.current = clientY;
+      document.addEventListener('touchmove', handleTouchmove);
+      document.addEventListener('touchend', handleTouchend);
+    },
+    [handleTouchend, handleTouchmove],
+  );
 
   useEffect(() => {
-    oDivRef.current.addEventListener("touchstart", handleTouchstart);
-  }, []);
-  // Bind it to a component
-  if (oDivRef.current) {
-    //  console.log(oDivRef.current.previousElementSibling);
-    // console.log(oDivRef.current.nextElementSibling);
-    // console.log(oDivRef.current.getBoundingClientRect());
-  }
+    if (!loaded) {
+      oDivRef.current.addEventListener('touchstart', handleTouchstart);
+      setLoaded(true);
+    }
+  }, [handleTouchstart, loaded]);
+
   return (
     <div
       className="dot"
-      ref={div => (oDivRef.current = div)}
-      {...bind()}
-      style={{
-        transform: `translate(${x}px,${y}px)`
+      ref={div => {
+        oDivRef.current = div;
       }}
-    ></div>
+      style={{
+        transform: `translate(${x}px,${y}px)`,
+      }}
+    />
   );
 };
 export default Dot;
