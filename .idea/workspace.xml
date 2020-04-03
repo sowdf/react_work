@@ -2,22 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="af0e6f76-829a-46da-b8c5-750dc4c8b528" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.editorconfig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.eslintignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.eslintrc.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.prettierignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.prettierrc" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.stylelintignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.stylelintrc.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Template1.zip" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/timeRange/Rectangle.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/timeRange/Dot.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/timeRange/Dot.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/timeRange/TimeRange.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/timeRange/TimeRange.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -348,7 +334,7 @@
       <workItem from="1585633954554" duration="21929000" />
       <workItem from="1585719980099" duration="24452000" />
       <workItem from="1585817567376" duration="72000" />
-      <workItem from="1585817692756" duration="3050000" />
+      <workItem from="1585817692756" duration="4318000" />
     </task>
     <task id="LOCAL-00001" summary="代碼提交">
       <created>1585635095153</created>
@@ -371,7 +357,14 @@
       <option name="project" value="LOCAL" />
       <updated>1585737768341</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="代码提交">
+      <created>1585823393741</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1585823393741</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -379,17 +372,18 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="代碼提交" />
-    <option name="LAST_COMMIT_MESSAGE" value="代碼提交" />
+    <MESSAGE value="代码提交" />
+    <option name="LAST_COMMIT_MESSAGE" value="代码提交" />
   </component>
   <component name="WindowStateProjectService">
     <state x="2372" y="94" key="#ESLint" timestamp="1585797616507">
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
     <state x="2372" y="94" key="#ESLint/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1585797616507" />
-    <state x="2372" y="39" key="CommitChangelistDialog2" timestamp="1585737767681">
+    <state x="2372" y="39" key="CommitChangelistDialog2" timestamp="1585823392772">
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
-    <state x="2372" y="39" key="CommitChangelistDialog2/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1585737767681" />
+    <state x="2372" y="39" key="CommitChangelistDialog2/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1585823392772" />
     <state x="2610" y="198" key="FileChooserDialogImpl" timestamp="1585797468671">
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
@@ -414,9 +408,9 @@
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
     <state x="2250" y="75" key="SettingsEditor/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1585797309399" />
-    <state x="2372" y="186" key="Vcs.Push.Dialog.v2" timestamp="1585737770589">
+    <state x="2372" y="186" key="Vcs.Push.Dialog.v2" timestamp="1585823395199">
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
-    <state x="2372" y="186" key="Vcs.Push.Dialog.v2/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1585737770589" />
+    <state x="2372" y="186" key="Vcs.Push.Dialog.v2/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1585823395199" />
   </component>
 </project>

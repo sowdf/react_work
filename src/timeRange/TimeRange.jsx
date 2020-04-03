@@ -23,10 +23,9 @@ const TimeRange = () => {
   }, []);
 
   const setTop = useCallback((index, top) => {
-    console.log('___________________top_______________', top);
     topsRef.current[index] = { top };
   }, []);
-  console.log('___________________tops_______________', topsRef.current);
+  
   const createLimit = index => {
     const tops = topsRef.current;
     const previous = tops[index - 1];
@@ -46,12 +45,12 @@ const TimeRange = () => {
     // 只有下一个 表示在第一个
     if (next) {
       const upMovePosition = current.top - (boxTopRef.current + PADDING);
-      const downMovePosition = next.top - (boxTopRef.current + SIZE);
+      const downMovePosition = next.top - (current.top + SIZE);
       return [upMovePosition, downMovePosition];
     }
     return [];
   };
-  console.log('___________________topsRef_______________', topsRef.current);
+  
   return (
     <div className="box">
       <Rectangle />
